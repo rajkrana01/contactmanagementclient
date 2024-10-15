@@ -1,27 +1,34 @@
-# Contactclient
+# Contacts Management Application (Angular + Material)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
+## Overview
 
-## Development server
+This project is a Contacts Management application built using **Angular 18** and **Angular Material**. It allows users to perform CRUD operations (Create, Read, Update, Delete) on contacts, and also includes features like sorting, filtering, and pagination.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project demonstrates various Angular Material components like `mat-table`, `mat-paginator`, `mat-sort`, and `mat-dialog` for the modal popups.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **CRUD Operations**: Users can add, edit, delete, and view contact details.
+- **Sorting and Filtering**: Users can sort contacts by name, email, or ID and filter by keyword.
+- **Pagination**: The application supports paginated display of contact records.
+- **Responsive Design**: Built using Angular Material and Bootstrap to ensure responsiveness and accessibility.
+- **Modal Dialog**: The application uses Angular Material `mat-dialog` to add and edit contacts.
+- **Form Validation**: Reactive forms are used with Angular Material form controls for validation.
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Before you begin, ensure you have the following installed on your local machine:
 
-## Running unit tests
+- [Node.js](https://nodejs.org/en/) (v16+)
+- [Angular CLI](https://angular.io/cli) (v18+)
+- [Visual Studio Code](https://code.visualstudio.com/) or any code editor
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+Follow the steps below to run the application locally.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 1. Clone the Repository
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone https://github.com/your-username/contacts-management-app.git
+cd contacts-management-app
