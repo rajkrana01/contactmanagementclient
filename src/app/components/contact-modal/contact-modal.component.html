@@ -1,0 +1,42 @@
+<!-- src/app/components/contact-modal/contact-modal.component.html -->
+<h1 mat-dialog-title>{{ isEdit ? 'Edit Contact' : 'Add New Contact' }}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>First Name *</mat-label>
+      <input matInput formControlName="firstName">
+      <mat-error *ngIf="f.firstName.invalid && f.firstName.touched">
+        First Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Last Name *</mat-label>
+      <input matInput formControlName="lastName">
+      <mat-error *ngIf="f.lastName.invalid && f.lastName.touched">
+        Last Name is required.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email *</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="f.email.invalid && f.email.touched">
+        <span *ngIf="f.email.errors?.['required']">Email is required.</span>
+        <span *ngIf="f.email.errors?.['email']">Invalid email format.</span>
+      </mat-error>
+    </mat-form-field>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
+  </form>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" [disabled]="contactForm.invalid" (click)="onSubmit()">
+    {{ isEdit ? 'Update' : 'Save' }}
+  </button>
+</div>

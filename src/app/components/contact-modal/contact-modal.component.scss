@@ -1,0 +1,33 @@
+.full-width {
+  width: 100%;
+}
+
+/* Adjust dialog content padding */
+.mat-dialog-content {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Form field margins */
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+/* Dialog actions alignment */
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Button styling */
+button.mat-button {
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .mat-dialog-container {
+    width: 90% !important;
+    max-width: none;
+  }
+}

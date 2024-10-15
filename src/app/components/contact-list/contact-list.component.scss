@@ -1,0 +1,47 @@
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  margin-bottom: 24px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+table.mat-table thead th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #333333;
+}
+
+table.mat-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+
+.actions-button {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+
+  table.mat-table thead th, table.mat-table tbody td {
+    padding: 8px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+}
