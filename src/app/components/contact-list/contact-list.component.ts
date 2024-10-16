@@ -16,7 +16,11 @@ import { ContactModalComponent } from '../contact-modal/contact-modal.component'
 export class ContactListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'email', 'actions'];
   dataSource: MatTableDataSource<Contact> = new MatTableDataSource();
-  errorMessage: string = '';
+    errorMessage: string = '';
+    contactData: any;
+    showHideList: boolean = true;
+
+    showMoreConact: boolean = false;
 
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -86,5 +90,12 @@ export class ContactListComponent implements OnInit {
         error: (err) => this.snackBar.open(`Error: ${err}`, 'Close', { duration: 3000 })
       });
     }
-  }
+    }
+    conactDetails(contact: Contact) {
+        this.showMoreConact = true;
+        this.contactData = contact;
+    }
+    showHideGrid(val: any) {
+        this.showHideList = val;
+    }
 }

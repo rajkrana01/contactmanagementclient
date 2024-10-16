@@ -23,13 +23,15 @@ import { ContactModalComponent } from './components/contact-modal/contact-modal.
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
+import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactListComponent,
-    ContactModalComponent
-  ],
+    declarations: [
+        AppComponent,
+        ContactListComponent,
+        ContactModalComponent,
+        ContactDetailsComponent
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
