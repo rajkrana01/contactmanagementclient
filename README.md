@@ -32,3 +32,5 @@ Follow the steps below to run the application locally.
 ```bash
 git clone https://github.com/your-username/contacts-management-app.git
 cd contacts-management-app
+use npm install command
+use ng serve command
