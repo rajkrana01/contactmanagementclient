@@ -16,6 +16,7 @@ export interface Contact {
 export class ContactService {
   private apiUrl = 'http://localhost:5001/api/contacts'; // Update with your backend URL
 
+    contactSelectedData: any;
   constructor(private http: HttpClient) { }
 
   getContacts(): Observable<Contact[]> {

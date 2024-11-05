@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Contact, ContactService } from '../../service/contact.service';
 import { ContactModalComponent } from '../contact-modal/contact-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-list',
@@ -18,6 +19,7 @@ export class ContactListComponent implements OnInit {
   dataSource: MatTableDataSource<Contact> = new MatTableDataSource();
     errorMessage: string = '';
     contactData: any;
+    contact: any;
     showHideList: boolean = true;
 
     showMoreConact: boolean = false;
@@ -28,7 +30,8 @@ export class ContactListComponent implements OnInit {
   constructor(
     private contactService: ContactService,
     public dialog: MatDialog,
-    private snackBar: MatSnackBar
+      private snackBar: MatSnackBar,
+      private router: Router 
   ) { }
 
   ngOnInit(): void {
@@ -97,5 +100,9 @@ export class ContactListComponent implements OnInit {
     }
     showHideGrid(val: any) {
         this.showHideList = val;
+    }
+    onRowClick(row: any) {
+        this.contactService.contactSelectedData = row;
+        this.router.navigate(['/contactInfo']);
     }
 }

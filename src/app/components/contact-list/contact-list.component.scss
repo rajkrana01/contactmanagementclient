@@ -31,17 +31,23 @@ table.mat-table tbody tr:hover {
 .actions-button {
   margin-right: 8px;
 }
+.class-table{
+    border: 1px solid black
+}
+.mat-mdc-row:hover {
+    background-color: #f1f1f1
+}
 
 @media (max-width: 768px) {
-  .container {
-    padding: 8px;
-  }
+    .container {
+        padding: 8px;
+    }
 
-  table.mat-table thead th, table.mat-table tbody td {
-    padding: 8px;
-  }
+    table.mat-table thead th, table.mat-table tbody td {
+        padding: 8px;
+    }
 
-  mat-form-field {
-    width: 100%;
-  }
+    mat-form-field {
+        width: 100%;
+    }
 }
