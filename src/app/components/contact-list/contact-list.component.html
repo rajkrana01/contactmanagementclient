@@ -63,7 +63,7 @@
 
             <!-- Header and Row Declarations -->
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr (click)="onRowClick(row)" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
         </table>
 
@@ -71,3 +71,18 @@
     </div>
 </div>
 <app-contact-details (showHideListEmit)="showHideGrid($event)" *ngIf="showMoreConact" [contact]="contactData"></app-contact-details>
+
+<div *ngIf="!showHideList">
+    <table class="class-table">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+            <td>{{contact.email}}</td>
+        </tr>
+    </table>
+</div>
